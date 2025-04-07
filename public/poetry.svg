@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <style>
+    .book { fill: #6366f1; }
+    .page { fill: #f3f4f6; }
+    .text-line { fill: #4b5563; opacity: 0.5; }
+    .quill { fill: #8b5cf6; }
+    .feather { fill: #c4b5fd; }
+  </style>
+  
+  <!-- Book -->
+  <rect class="book" x="100" y="100" width="200" height="240" rx="10" />
+  
+  <!-- Pages -->
+  <rect class="page" x="110" y="110" width="180" height="220" rx="5" />
+  
+  <!-- Text lines on the page -->
+  <rect class="text-line" x="130" y="150" width="140" height="5" rx="2" />
+  <rect class="text-line" x="130" y="170" width="120" height="5" rx="2" />
+  <rect class="text-line" x="130" y="190" width="140" height="5" rx="2" />
+  <rect class="text-line" x="130" y="210" width="100" height="5" rx="2" />
+  <rect class="text-line" x="130" y="230" width="130" height="5" rx="2" />
+  <rect class="text-line" x="130" y="250" width="140" height="5" rx="2" />
+  <rect class="text-line" x="130" y="270" width="110" height="5" rx="2" />
+  
+  <!-- Quill pen -->
+  <path class="quill" d="M280,80 L260,120 L250,150 L245,170 C245,170 255,160 260,155 C265,150 270,145 270,145 L280,80 Z" />
+  <path class="feather" d="M280,80 L300,50 C300,50 290,60 285,70 C280,80 280,80 280,80 Z" />
+</svg> 
