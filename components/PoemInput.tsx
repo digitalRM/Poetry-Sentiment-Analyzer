@@ -98,8 +98,8 @@ export default function PoemInput({ onAnalyze, isLoading }: PoemInputProps) {
               </>
             ) : (
               <>
-                <BookText className="w-4 h-4" />
                 Analyze Poem
+                <BookText className="w-4 h-4" />
               </>
             )}
           </button>
