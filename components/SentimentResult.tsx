@@ -142,9 +142,9 @@ export default function SentimentResult({
   };
 
   return (
-    <div className="bg-white rounded-xl border border-neutral-200 shadow-sm">
+    <div className="bg-white rounded-xl border border-neutral-200 text-black">
       <div className="p-5">
-        <h2 className="text-base font-semibold text-neutral-900 mb-4">
+        <h2 className="text-base font-semibold text-black tracking-tight mb-4">
           Analysis Results
         </h2>
 
@@ -155,7 +155,7 @@ export default function SentimentResult({
         >
           <div className="flex items-center gap-3">
             {getEmotionIcon(emotion)}
-            <h3 className="text-base font-medium text-neutral-900">
+            <h3 className="text-base font-medium text-black tracking-tight">
               Primary Emotion:{" "}
               <span className={getEmotionTextClass(emotion)}>{emotion}</span>
             </h3>
@@ -166,7 +166,7 @@ export default function SentimentResult({
         </div>
 
         <div className="space-y-4">
-          <h4 className="text-sm font-medium text-neutral-800">
+          <h4 className="text-sm font-medium text-neutral-800 tracking-tight">
             Emotion Breakdown
           </h4>
 

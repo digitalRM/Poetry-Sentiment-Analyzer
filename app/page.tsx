@@ -53,8 +53,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-4">
               <div className="bg-white rounded-xl border border-neutral-200">
                 <div className="">
                   <PoemInput onAnalyze={handleAnalyze} isLoading={loading} />
@@ -131,7 +131,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {loading ? (
                 <div className="bg-white rounded-xl border border-neutral-200 shadow-sm p-8">
                   <div className="flex flex-col items-center justify-center h-64">
@@ -147,7 +147,7 @@ export default function Home() {
                   scores={analysisResult.scores}
                 />
               ) : (
-                <div className="bg-white rounded-xl border border-neutral-200 shadow-sm p-8">
+                <div className="bg-white rounded-xl border border-neutral-200 p-8">
                   <div className="flex flex-col items-center justify-center h-64">
                     <Image
                       src="/poetry.svg"
@@ -164,9 +164,9 @@ export default function Home() {
               )}
 
               {analysisResult && (
-                <div className="bg-white rounded-xl border border-neutral-200 shadow-sm">
+                <div className="bg-white rounded-xl border border-neutral-200">
                   <div className="p-5">
-                    <h2 className="text-base font-semibold text-neutral-900 mb-4">
+                    <h2 className="text-base font-semibold text-black tracking-tight mb-4">
                       How It Works
                     </h2>
                     <div className="space-y-3 text-sm text-neutral-600">
