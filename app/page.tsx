@@ -177,7 +177,7 @@ export default function Home() {
                       alt="Poetry illustration"
                       className="w-96"
                     />
-                    <p className="mt-6 text-sm text-neutral-600 pb-12">
+                    <p className="mt-6 text-sm text-neutral-600 pb-16">
                       Enter a poem to see its emotional analysis
                     </p>
                   </div>
