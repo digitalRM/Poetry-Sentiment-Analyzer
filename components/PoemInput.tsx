@@ -1,3 +1,4 @@
+import { BookText } from "lucide-react";
 import { useState } from "react";
 
 interface PoemInputProps {
@@ -35,13 +36,14 @@ export default function PoemInput({ onAnalyze, isLoading }: PoemInputProps) {
   ];
 
   return (
-    <div className="bg-white rounded-xl p-6">
-      <h2 className="text-base font-semibold mb-4 text-black tracking-tight">
-        Enter Poem to Analyze
-      </h2>
-
+    <div className="bg-white rounded-xl">
+      <div className="p-4 pb-0">
+        <h2 className="text-base font-semibold mb-4 text-black tracking-tight">
+          Enter Poem to Analyze
+        </h2>
+      </div>
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
+        <div className="mb-4 px-4">
           <textarea
             value={poemText}
             onChange={(e) => setPoemText(e.target.value)}
@@ -50,68 +52,58 @@ export default function PoemInput({ onAnalyze, isLoading }: PoemInputProps) {
           />
         </div>
 
-        <div className="flex flex-wrap gap-1 items-center mb-4 text-xs">
-          <span className="text-neutral-500">Try a sample:</span>
-          {samplePoems.map((sample) => (
-            <button
-              key={sample.name}
-              type="button"
-              onClick={() => handleSampleClick(sample.text)}
-              className="text-blue-600 hover:text-blue-800 bg-blue-100 px-2 py-1 rounded-full transition-colors"
-            >
-              {sample.name}
-            </button>
-          ))}
-        </div>
+        <div className="bg-neutral-50 rounded-b-xl border-t border-neutral-200 p-4">
+          <div className="flex flex-wrap gap-1 items-center mb-4 text-xs">
+            <span className="text-neutral-500">Try a sample:</span>
+            {samplePoems.map((sample) => (
+              <button
+                key={sample.name}
+                type="button"
+                onClick={() => handleSampleClick(sample.text)}
+                className="text-blue-600 hover:text-blue-800 bg-blue-100 px-2 py-1 rounded-full transition-colors cursor-pointer"
+              >
+                {sample.name}
+              </button>
+            ))}
+          </div>
 
-        <button
-          type="submit"
-          disabled={isLoading || poemText.trim().length === 0}
-          className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors disabled:bg-blue-300 disabled:cursor-not-allowed text-sm font-medium"
-        >
-          {isLoading ? (
-            <>
-              <svg
-                className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                ></path>
-              </svg>
-              Analyzing...
-            </>
-          ) : (
-            <>
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                />
-              </svg>
-              Analyze Poem
-            </>
-          )}
-        </button>
+          <button
+            type="submit"
+            disabled={isLoading || poemText.trim().length === 0}
+            className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors disabled:bg-blue-300 disabled:cursor-not-allowed text-sm font-medium cursor-pointer"
+          >
+            {isLoading ? (
+              <>
+                <svg
+                  className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                Analyzing...
+              </>
+            ) : (
+              <>
+                <BookText className="w-4 h-4" />
+                Analyze Poem
+              </>
+            )}
+          </button>
+        </div>
       </form>
     </div>
   );
