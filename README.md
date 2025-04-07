@@ -2,6 +2,8 @@
 
 A web application that analyzes the emotional content of poetry using Natural Language Processing (NLP) techniques.
 
+![image](https://github.com/user-attachments/assets/b0be865d-1adf-4807-b0ae-5df14cc121c7)
+
 ## Features
 
 - **Sentiment Analysis**: Analyze poems to detect six emotional categories (Anger, Disgust, Fear, Joy, Neutral, Sadness)
