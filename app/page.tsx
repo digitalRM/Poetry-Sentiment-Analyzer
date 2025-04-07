@@ -6,6 +6,7 @@ import PoemInput from "../components/PoemInput";
 import SentimentResult from "../components/SentimentResult";
 import { EmotionClass } from "../data/poemSentiments";
 import { analyzePoemSentiment } from "../actions/sentimentActions";
+import { ArrowUpRightIcon } from "lucide-react";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -41,15 +42,15 @@ export default function Home() {
               </h1>
             </div>
             <p className="text-sm text-neutral-600">
-              This tool uses Natural Language Processing to analyze the
+              This tool uses Natural Language Processing (NLP) to analyze the
               emotional content of poetry. Upload any poem to identify its
               primary emotional tone across six categories: Anger, Disgust,
               Fear, Joy, Neutral, and Sadness.
             </p>
             <p className="text-sm text-neutral-600">
-              Built using advanced NLP techniques including tokenization,
-              stopword removal, TF-IDF feature extraction, and emotional
-              sentiment analysis.
+              Built using NLP techniques including tokenization, stopword
+              removal, TF-IDF feature extraction, and emotional sentiment
+              analysis.
             </p>
           </div>
 
@@ -127,6 +128,28 @@ export default function Home() {
                       <span>- Grief, sorrow, melancholy</span>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div className="mt-4 flex justify-between flex-col lg:flex-row gap-4 px-4">
+                <p className="text-sm text-neutral-600">
+                  A tool by{" "}
+                  <a
+                    href="https://www.ruslan.in"
+                    target="_blank"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Ruslan Mukhamedvaleev
+                  </a>{" "}
+                </p>
+                <div className="text-sm text-neutral-600">
+                  © {new Date().getFullYear()} ·{" "}
+                  <a
+                    href="https://github.com/digitalRM/WSU-Institution-Data-Processing-Research-Tool"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    View GitHub
+                  </a>
                 </div>
               </div>
             </div>
