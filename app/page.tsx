@@ -148,15 +148,13 @@ export default function Home() {
                 />
               ) : (
                 <div className="bg-white rounded-xl border border-neutral-200 p-8">
-                  <div className="flex flex-col items-center justify-center h-64">
-                    <Image
-                      src="/poetry.svg"
+                  <div className="flex flex-col items-center justify-center h-fit">
+                    <img
+                      src="/empty.png"
                       alt="Poetry illustration"
-                      width={180}
-                      height={180}
-                      className="mx-auto opacity-70"
+                      className="w-96"
                     />
-                    <p className="mt-6 text-sm text-neutral-600">
+                    <p className="mt-6 text-sm text-neutral-600 pb-24">
                       Enter a poem to see its emotional analysis
                     </p>
                   </div>

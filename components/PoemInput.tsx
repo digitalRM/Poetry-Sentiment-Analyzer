@@ -37,13 +37,13 @@ export default function PoemInput({ onAnalyze, isLoading }: PoemInputProps) {
 
   return (
     <div className="bg-white rounded-xl">
-      <div className="p-4 pb-0">
+      <div className="p-5 pb-0">
         <h2 className="text-base font-semibold mb-4 text-black tracking-tight">
           Enter Poem to Analyze
         </h2>
       </div>
       <form onSubmit={handleSubmit}>
-        <div className="mb-4 px-4">
+        <div className="mb-4 px-5">
           <textarea
             value={poemText}
             onChange={(e) => setPoemText(e.target.value)}
@@ -52,7 +52,7 @@ export default function PoemInput({ onAnalyze, isLoading }: PoemInputProps) {
           />
         </div>
 
-        <div className="bg-neutral-50 rounded-b-xl border-t border-neutral-200 p-4">
+        <div className="bg-neutral-50 rounded-b-xl border-t border-neutral-200 p-5">
           <div className="flex flex-wrap gap-1 items-center mb-4 text-xs">
             <span className="text-neutral-500">Try a sample:</span>
             {samplePoems.map((sample) => (
@@ -70,7 +70,7 @@ export default function PoemInput({ onAnalyze, isLoading }: PoemInputProps) {
           <button
             type="submit"
             disabled={isLoading || poemText.trim().length === 0}
-            className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors disabled:bg-blue-300 disabled:cursor-not-allowed text-sm font-medium cursor-pointer"
+            className="w-full flex items-center justify-center gap-2 bg-[#0166FF] text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors disabled:bg-blue-300 disabled:cursor-not-allowed text-sm font-medium cursor-pointer"
           >
             {isLoading ? (
               <>
