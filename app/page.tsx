@@ -136,7 +136,7 @@ export default function Home() {
                   <a
                     href="https://www.ruslan.in"
                     target="_blank"
-                    className="text-blue-600 hover:underline"
+                    className="text-[#0166FF] hover:underline"
                   >
                     Ruslan Mukhamedvaleev
                   </a>{" "}
@@ -177,7 +177,7 @@ export default function Home() {
                       alt="Poetry illustration"
                       className="w-96"
                     />
-                    <p className="mt-6 text-sm text-neutral-600 pb-24">
+                    <p className="mt-6 text-sm text-neutral-600 pb-12">
                       Enter a poem to see its emotional analysis
                     </p>
                   </div>
